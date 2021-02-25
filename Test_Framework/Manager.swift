@@ -7,10 +7,16 @@
 
 import Foundation
 
-class Manager {
+public class Manager {
+    
+    var testString: String
+    
+    public init(test: String) {
+        self.testString = test
+    }
     
     public func returnString() -> String {
-        return "Testing"
+        return "Testing \(self.testString)"
     }
     
 }

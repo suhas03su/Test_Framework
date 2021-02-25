@@ -4,3 +4,8 @@
 import Foundation
 import Swift
 @_exported import Test_Framework
+public class Manager {
+  public init(test: Swift.String)
+  public func returnString() -> Swift.String
+  @objc deinit
+}
