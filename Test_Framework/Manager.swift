@@ -7,14 +7,12 @@
 
 import Foundation
 
-public class Manager {
+@objc(ManagerFromSwift)
+public class Manager: NSObject {
     
-    var testString: String
+    var testString = "Testing Purpose"
     
-    public init(test: String) {
-        self.testString = test
-    }
-    
+    @objc(returnStringFromSwift)
     public func returnString() -> String {
         return "Testing \(self.testString)"
     }

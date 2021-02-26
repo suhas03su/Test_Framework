@@ -4,8 +4,8 @@
 import Foundation
 import Swift
 @_exported import Test_Framework
-public class Manager {
-  public init(test: Swift.String)
-  public func returnString() -> Swift.String
+@_inheritsConvenienceInitializers @objc(ManagerFromSwift) public class Manager : ObjectiveC.NSObject {
+  @objc(returnStringFromSwift) public func returnString() -> Swift.String
   @objc deinit
+  @objc override dynamic public init()
 }
