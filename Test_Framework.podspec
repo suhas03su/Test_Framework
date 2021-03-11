@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
 s.name			= "Test_Framework"
-s.version		= "1.6"
+s.version		= "1.7"
 s.summary		= "Test Framework"
 s.description		= <<-DESC
  	Just a Test Framework. Nothing Else
