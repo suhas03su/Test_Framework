@@ -10,6 +10,7 @@ jobs:
     runs-on: macOS-latest
 
     steps:
+    - uses: actions/checkout@main
     - name: Push Podspec To Cocopods
       env: 
         COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
