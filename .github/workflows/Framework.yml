@@ -1,0 +1,19 @@
+name: XCFramework
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  create_release:
+    name: Create Release
+    runs-on: macos-latest
+    steps:
+
+      - uses: actions/checkout@master
+
+      - name: Create XCFramework
+        uses: unsignedapps/swift-create-xcframework@master
+
+      # Create a release
+      # Upload those artifacts to the release
