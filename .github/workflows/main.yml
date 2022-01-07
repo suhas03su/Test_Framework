@@ -1,0 +1,17 @@
+name: Cocopods
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  job1:
+    name: Cocoapods Release
+    runs-on: macOS-latest
+
+    steps:
+    - name: Push Podspec To Cocopods
+      env: 
+        COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
+      run: |
+        pod trunk push <YOURLIBRARY>.podspec
