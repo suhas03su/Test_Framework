@@ -6,14 +6,14 @@ on:
 
 jobs:
   create_release:
-    name: Create Release
+    name: Build Framework
     runs-on: macos-latest
     steps:
 
-      - uses: actions/checkout@master
-
+      - uses: actions/checkout@main
       - name: Create XCFramework
-        uses: unsignedapps/swift-create-xcframework@master
+        run: |
+          xcodebuild archive -scheme Test_Framework -destination="iOS" -archivePath /tmp/xcf/ios.xcarchive -derivedDataPath /tmp/iphoneos -sdk iphoneos SKIP_INSTALL=NO && xcodebuild archive -scheme Test_Framework -destination="iOS Simulator" -archivePath /tmp/xcf/iossimulator.xcarchive -derivedDataPath /tmp/iphoneos -sdk iphonesimulator SKIP_INSTALL=NO && xcodebuild -create-xcframework -framework /tmp/xcf/ios.xcarchive/Products/Library/Frameworks/Test_Framework.framework -framework /tmp/xcf/iossimulator.xcarchive/Products/Library/Frameworks/Test_Framework.framework -output Test_Framework.xcframework
 
       # Create a release
       # Upload those artifacts to the release
