@@ -2,7 +2,7 @@ name: Cocopods
 on:
   push:
     branches:
-    - master
+    - main
 
 jobs:
   job1:
