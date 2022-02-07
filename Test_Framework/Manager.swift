@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CashfreePGCoreSDK
 
 @objc(ManagerFromSwift)
 public class Manager: NSObject {
@@ -14,6 +15,16 @@ public class Manager: NSObject {
     
     @objc(returnStringFromSwift)
     public func returnString() -> String {
+        
+        do {
+            let wallet = try CFWallet.CFWalletBuilder()
+                .setPhone("8908908901")
+                .setChannel("phonepe")
+                .build()
+            print(wallet)
+        } catch {
+            
+        }
         return "Testing \(self.testString)"
     }
     

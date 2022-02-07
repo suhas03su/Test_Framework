@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43F27537B1A86399433ECBDB /* Pods_Test_Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5C488C46EBCAF48ADF0FAC /* Pods_Test_Framework.framework */; };
 		A15D43F425E7841E0025B51A /* Test_Framework.h in Headers */ = {isa = PBXBuildFile; fileRef = A15D43F225E7841E0025B51A /* Test_Framework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A15D43FC25E784470025B51A /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15D43FB25E784470025B51A /* Manager.swift */; };
 /* End PBXBuildFile section */
@@ -16,6 +17,9 @@
 		A15D43F225E7841E0025B51A /* Test_Framework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test_Framework.h; sourceTree = "<group>"; };
 		A15D43F325E7841E0025B51A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A15D43FB25E784470025B51A /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
+		A2B5B32FA8B56CE7D465C31C /* Pods-Test_Framework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test_Framework.release.xcconfig"; path = "Target Support Files/Pods-Test_Framework/Pods-Test_Framework.release.xcconfig"; sourceTree = "<group>"; };
+		D76EA89387765CC3BFDE7F60 /* Pods-Test_Framework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test_Framework.debug.xcconfig"; path = "Target Support Files/Pods-Test_Framework/Pods-Test_Framework.debug.xcconfig"; sourceTree = "<group>"; };
+		DB5C488C46EBCAF48ADF0FAC /* Pods_Test_Framework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Test_Framework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -23,17 +27,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43F27537B1A86399433ECBDB /* Pods_Test_Framework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C7D5D3C2CD08DE159E8420C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D76EA89387765CC3BFDE7F60 /* Pods-Test_Framework.debug.xcconfig */,
+				A2B5B32FA8B56CE7D465C31C /* Pods-Test_Framework.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7AFCF6CDB8EC1DC2A484BA6F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DB5C488C46EBCAF48ADF0FAC /* Pods_Test_Framework.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A15D43E525E7841E0025B51A = {
 			isa = PBXGroup;
 			children = (
 				A15D43F125E7841E0025B51A /* Test_Framework */,
 				A15D43F025E7841E0025B51A /* Products */,
+				1C7D5D3C2CD08DE159E8420C /* Pods */,
+				7AFCF6CDB8EC1DC2A484BA6F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +97,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A15D43F725E7841E0025B51A /* Build configuration list for PBXNativeTarget "Test_Framework" */;
 			buildPhases = (
+				541CC92D7C484745842BBA7C /* [CP] Check Pods Manifest.lock */,
 				A15D43EA25E7841E0025B51A /* Headers */,
 				A15D43EB25E7841E0025B51A /* Sources */,
 				A15D43EC25E7841E0025B51A /* Frameworks */,
@@ -128,6 +153,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		541CC92D7C484745842BBA7C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Test_Framework-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A15D43EB25E7841E0025B51A /* Sources */ = {
@@ -265,12 +315,9 @@
 		};
 		A15D43F825E7841E0025B51A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D76EA89387765CC3BFDE7F60 /* Pods-Test_Framework.debug.xcconfig */;
 			buildSettings = {
-				ARCHS = (
-					"$(ARCHS_STANDARD)",
-					i386,
-					x86_64,
-				);
+				ARCHS = "$(ARCHS_STANDARD)";
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -281,6 +328,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Test_Framework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -290,20 +338,18 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.football.Test-Framework";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = NO;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		A15D43F925E7841E0025B51A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2B5B32FA8B56CE7D465C31C /* Pods-Test_Framework.release.xcconfig */;
 			buildSettings = {
-				ARCHS = (
-					"$(ARCHS_STANDARD)",
-					i386,
-					x86_64,
-				);
+				ARCHS = "$(ARCHS_STANDARD)";
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -314,6 +360,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Test_Framework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -322,8 +369,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.football.Test-Framework";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = NO;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

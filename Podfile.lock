@@ -1,0 +1,16 @@
+PODS:
+  - CashfreePGCoreSDK (1.0.0)
+
+DEPENDENCIES:
+  - CashfreePGCoreSDK (~> 1.0.0)
+
+SPEC REPOS:
+  trunk:
+    - CashfreePGCoreSDK
+
+SPEC CHECKSUMS:
+  CashfreePGCoreSDK: de79e871254840aa1e7eb6a7ab36b6369bb7edb2
+
+PODFILE CHECKSUM: eaa14cee74671bbe5a4472a921c6021c39e0e88e
+
+COCOAPODS: 1.11.2
